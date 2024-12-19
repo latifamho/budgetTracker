@@ -1,0 +1,65 @@
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("POSTGRES_PRISMA_URL")
+  directUrl=env("POSTGRES_URL_NON_POOLING")
+}
+
+
+model UserSettings{
+  userId      String @id 
+  currency    String
+}
+
+model Category{
+  createdAT    DateTime @default(now())
+  name      String
+  userId    String
+  icon      String
+  type      String  @default("income")
+
+  @@unique([name,userId,type])
+}
+
+model Transaction{
+  id           String @id @default(uuid())
+  createdAT    DateTime @default(now())
+  updatedAt    DateTime @default(now())
+  amount       Float 
+  description  String 
+  userId       String
+  type         String
+  date         DateTime
+  category     String
+  categoryIcon String
+}
+
+model MonthHistory{
+  userId    String
+
+  day       Int
+  month     Int
+  year      Int
+
+  income    Float
+  expense    Float
+  
+  @@id([day,month,year,userId])
+}
+
+
+model YearHistory{
+  userId    String
+ 
+  month     Int
+  year      Int
+
+  income    Float
+  expense    Float
+  
+  @@id([month,year,userId])
+}
