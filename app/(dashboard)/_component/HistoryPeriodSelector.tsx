@@ -128,7 +128,7 @@ function YearSelector({
         <SelectValue />
       </SelectTrigger>
       <SelectContent>
-        {years.map((year) => (
+        {years?.map((year) => (
           <SelectItem key={year?.toString()} value={year?.toString()}>
             {year as ReactNode}
           </SelectItem>
