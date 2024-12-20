@@ -28,7 +28,7 @@ const items = [
 function DesktopNavbar() {
   return (
     <div className=" hidden m-auto! border-separate border-b bg-background md:block">
-      <nav className=" m-auto !important container flex items-center justify-between px-8 ">
+      <nav className=" m-auto !important container flex items-center justify-between px-3 md:px-8 ">
         <div className=" flex h-[80px] min-h-[60px] items-center gap-x-4">
           <Logo />
           <div className=" flex h-full">
