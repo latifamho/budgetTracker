@@ -78,7 +78,7 @@ function MontheSelector({
 }) {
   return (
     <Select
-      value={period.month.toString()}
+      value={period.month?.toString()}
       onValueChange={(value) => {
         setPeriod({
           year: period.year,
@@ -96,7 +96,7 @@ function MontheSelector({
             { month: "long" }
           );
           return (
-            <SelectItem key={month.toString()} value={month.toString()}>
+            <SelectItem key={month?.toString()} value={month?.toString()}>
               {monthStr}
             </SelectItem>
           );
@@ -116,7 +116,7 @@ function YearSelector({
 }) {
   return (
     <Select
-      value={period.year.toString()}
+      value={period.year?.toString()}
       onValueChange={(value) => {
         setPeriod({
           month: period.month,
@@ -129,7 +129,7 @@ function YearSelector({
       </SelectTrigger>
       <SelectContent>
         {years.map((year) => (
-          <SelectItem key={year.toString()} value={year.toString()}>
+          <SelectItem key={year?.toString()} value={year?.toString()}>
             {year as ReactNode}
           </SelectItem>
         ))}
