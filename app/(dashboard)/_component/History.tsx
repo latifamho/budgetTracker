@@ -43,7 +43,7 @@ const History = ({ userSettings }: { userSettings: UserSettings }) => {
   const dataAvailable =
     historyDataQuery.data && historyDataQuery.data.length > 0;
   return (
-    <div className=" container mx-auto">
+    <div className=" container mx-auto  max-sm:px-2">
       <h2 className=" mt-12 text-3xl font-bold"> History</h2>
       <Card className=" col-span-12 mt-2 w-full">
         <CardHeader className=" gap-2">

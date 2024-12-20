@@ -17,7 +17,7 @@ const Overview = ({ userSettings }: { userSettings: UserSettings }) => {
   return (
     <>
       {" "}
-      <div className=" mx-auto container  flex flex-wrap items-end justify-between gap-2 py-6">
+      <div className=" mx-auto container  flex flex-wrap items-end justify-between gap-2 max-sm:px-2 py-6">
         <h2 className=" text-3xl font-bold"> Overview</h2>
         <div className=" flex items-center gap-3">
           <DateRangePicker
@@ -38,7 +38,7 @@ const Overview = ({ userSettings }: { userSettings: UserSettings }) => {
           />
         </div>
       </div>
-      <div className=" container m-auto flex flex-col w-full gap-2">
+      <div className=" container m-auto max-sm:px-2 flex flex-col w-full gap-2">
         <StatsCard
           userSettings={userSettings}
           from={dateRange.from}

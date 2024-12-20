@@ -15,7 +15,7 @@ function TransactionsPage() {
   return (
     <>
       <div className=" border-b bg-card">
-        <div className=" container  mx-auto flex flex-wrap items-center justify-between gap-6 py-8">
+        <div className=" container   max-sm:px-2 mx-auto flex flex-wrap items-center justify-between gap-6 py-8">
           <div>
             <p className=" text-3xl font-bold">Transaction History</p>
           </div>
@@ -38,7 +38,7 @@ function TransactionsPage() {
         </div>
       </div>
       <div className=" container mx-auto">
-        <TransactionTable from={dateRange.from} to={dateRange.to} /> 
+        <TransactionTable from={dateRange.from} to={dateRange.to} />
       </div>
     </>
   );

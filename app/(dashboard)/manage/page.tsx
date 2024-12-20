@@ -23,7 +23,7 @@ import DeleteCategoryDialog from "../_component/DeleteCategoryDialog";
 const Page = () => {
   return (
     <>
-      <div className=" borderb bg-card">
+      <div className=" border-b bg-card  max-sm:px-2">
         <div className=" container mx-auto flex flex-wrap items-center  justify-between gap6 py-8">
           <div>
             <p className=" text-3xl font-bold ">Manage</p>
@@ -33,7 +33,7 @@ const Page = () => {
           </div>
         </div>
       </div>
-      <div className="  container mx-auto flex flex-col gap-4 p-4">
+      <div className="  container mx-auto  max-sm:px-2 flex flex-col gap-4 p-4">
         <Card>
           <CardHeader>
             <CardTitle>Currency</CardTitle>
