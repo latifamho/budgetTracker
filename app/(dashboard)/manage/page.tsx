@@ -66,8 +66,8 @@ function CategoryList({ type }: { type: TransactionType }) {
     <SkeletonWrapper isLoading={categoriesQuery.isLoading}>
       <Card>
         <CardHeader>
-          <CardTitle className="flex flex-row items-center justify-between gap-2">
-            <div className=" flex items-center max-sm:flex-col  gap-2">
+          <CardTitle className="flex flex-row max-sm:flex-col items-center justify-between gap-2">
+            <div className=" flex items-center flex-col  gap-2">
               {type === "expense" ? (
                 <TrendingDown className=" h-12 w-12 items-center rounded-lg bg-red-400/10 p-2 text-red-500" />
               ) : (
